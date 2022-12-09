@@ -41,11 +41,11 @@ namespace OOPLotto
         private void PurchaseLotto()
         {
             // 로또 구매하기
-            LotteryService _lottoShop;
+            LotteryShop _lottoShop;
 
             try
             {
-                _lottoShop = new LotteryService(tb_buyMoney.Text);
+                _lottoShop = new LotteryShop(tb_buyMoney.Text);
             }
             catch (Exception ex)
             {

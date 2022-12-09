@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions.cs" />
-    <Compile Include="LotteryService.cs" />
+    <Compile Include="LotteryShop.cs" />
     <Compile Include="OOPLotto.cs">
       <SubType>Form</SubType>
     </Compile>

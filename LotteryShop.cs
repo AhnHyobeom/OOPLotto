@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace OOPLotto
 {
-    public class LotteryService
+    public class LotteryShop
     {
         private int purchaseAmount = -1;
         private int purchaseCount = -1;
         private int lottoPrice = 1000;
 
-        public LotteryService(string _purchaseAmount)
+        public LotteryShop(string _purchaseAmount)
         {
             try
             {
@@ -127,7 +127,7 @@ namespace OOPLotto
 
         public string PrintLottoTicket()
         {
-            return string.Join(", ", lottoNumbers);
+            return string.Join(",", lottoNumbers);
         }
     }
 
@@ -135,13 +135,13 @@ namespace OOPLotto
     {
         public LotteryResultCheck(LottoTickets _lottoPurchasesTicketList, string _jackPotNumbers)
         {
-            ResultCheck(_lottoPurchasesTicketList, new LottoTicket(_jackPotNumbers.Split(',').Select(x => int.Parse(x)).ToList()));
+            ResultCheck(_lottoPurchasesTicketList, new LottoTicket(_jackPotNumbers.Replace(" ", "").Split(',').Select(x => int.Parse(x)).ToList()));
         }
 
 
         private void ResultCheck(LottoTickets _lottoPurchasesTicketList, LottoTicket jackpotNumbers)
         {
-            
+
         }
     }
 }
